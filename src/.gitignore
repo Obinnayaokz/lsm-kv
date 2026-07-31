@@ -1,0 +1,4 @@
+*.o
+test_memtable
+scratch
+scratch1
