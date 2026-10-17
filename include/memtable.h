@@ -10,10 +10,11 @@ public:
     void put(const std::string& key, const std::string& value);
     std::optional<std::string> get(const std::string& key) const;
     void remove(const std::string& key);
-    size_t size() const;
+    size_t size() const; // number of entries, including tombstones
 
 private:
-    std::map<std::string, std::string> table_;
+    // value = a real value, std::nukkopt = tombstone (key was deleted)
+    std::map<std::string, std::optional<std::string>> table_;
 };
 
 #endif

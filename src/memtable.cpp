@@ -13,7 +13,7 @@ std::optional<std::string> MemTable::get(const std::string& key) const {
 }
 
 void MemTable::remove(const std::string& key) {
-    table_.erase(key);
+    table_[key] = std::nullopt; // leaves a tombstone instead of erasing
 }
 
 size_t MemTable::size() const {
