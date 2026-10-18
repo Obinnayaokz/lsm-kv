@@ -4,3 +4,5 @@ scratch
 scratch1
 scratch1.cpp
 .vscode/
+test_wal
+*.wal
